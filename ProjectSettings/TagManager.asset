@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 3732695635
+    locked: 0
+  - name: Piso
+    uniqueID: 2287005281
+    locked: 0
+  - name: Plataformas
+    uniqueID: 4005134517
+    locked: 0
+  - name: Enemigos
+    uniqueID: 257628115
+    locked: 0
+  - name: Jugador
+    uniqueID: 639200133
+    locked: 0
+  - name: Adornos
+    uniqueID: 1869986447
+    locked: 0
