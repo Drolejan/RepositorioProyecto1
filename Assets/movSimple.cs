@@ -5,7 +5,8 @@ using UnityEngine;
 public class movSimple : MonoBehaviour
 {
     Rigidbody2D rbplayer;
-    public float movX,movY,speed;
+    public float movX,movY,speed,jumpS;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,13 @@ public class movSimple : MonoBehaviour
     void Update()
     {
         movX=Input.GetAxis("Horizontal")*speed;
-        movY=Input.GetAxis("Vertical")*speed;
+        //movY=Input.GetAxis("Vertical")*speed;
 
-        rbplayer.velocity= new Vector2(movX,movY);
+        rbplayer.velocity= new Vector2(movX,rbplayer.velocity.y);
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            rbplayer.AddForce(Vector2.up*jumpS);
+        }
     }
 }
