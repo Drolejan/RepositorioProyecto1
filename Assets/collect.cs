@@ -4,24 +4,12 @@ using UnityEngine;
 
 public class collect : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Sumar Puntos");
-            gameManager.instance.SumarPuntos();
+            gameManager.miGM.SumarPuntos();
             gameObject.SetActive(false);
         }
     }
