@@ -185,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d56465f7cdc0d5a48825ce6dee793063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puntos: 0
 --- !u!4 &443342776
 Transform:
   m_ObjectHideFlags: 0
@@ -410,7 +411,8 @@ GameObject:
   - component: {fileID: 996143293}
   - component: {fileID: 996143292}
   - component: {fileID: 996143291}
-  - component: {fileID: 996143294}
+  - component: {fileID: 996143295}
+  - component: {fileID: 996143296}
   m_Layer: 0
   m_Name: Coin
   m_TagString: Untagged
@@ -501,7 +503,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &996143294
+--- !u!114 &996143295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 996143290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b0927d9f83951744a82ad314f155f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &996143296
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -509,7 +523,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 996143290}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -686,6 +700,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6432609860406773169, guid: 42303504a4fc90a43bc5178df9876bf2, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6432609860406773169, guid: 42303504a4fc90a43bc5178df9876bf2, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6432609860406773170, guid: 42303504a4fc90a43bc5178df9876bf2, type: 3}
