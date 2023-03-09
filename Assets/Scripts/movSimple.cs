@@ -7,23 +7,26 @@ public class movSimple : MonoBehaviour
     Rigidbody2D rbplayer;
     public float movX,movY,speed,jumpS;
 
-    // Start is called before the first frame update
     void Start()
     {
         rbplayer=GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
+    // El Update se ejecuta cada frame
     void Update()
     {
         movX=Input.GetAxis("Horizontal")*speed;
-        //movY=Input.GetAxis("Vertical")*speed;
-
-        rbplayer.velocity= new Vector2(movX,rbplayer.velocity.y);
+        //movY=Input.GetAxis("Vertical")*speed; //Ahorita no tenemos movimiento vertical
 
         if (Input.GetButtonDown("Jump"))
         {
             rbplayer.AddForce(Vector2.up*jumpS);
         }
+    }
+
+    //El FixedUpdate se ejecuta cada cierto tiempo en fracciones de segundo (El tiempo entre un frame y otro)
+    void FixedUpdate()
+    {
+        rbplayer.velocity = new Vector2(movX, rbplayer.velocity.y);
     }
 }
