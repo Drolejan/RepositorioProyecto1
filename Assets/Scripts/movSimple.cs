@@ -27,6 +27,7 @@ public class movSimple : MonoBehaviour
     //El FixedUpdate se ejecuta cada cierto tiempo en fracciones de segundo (El tiempo entre un frame y otro)
     void FixedUpdate()
     {
+        if(movX!=0)
         rbplayer.velocity = new Vector2(movX, rbplayer.velocity.y);
     }
 }
