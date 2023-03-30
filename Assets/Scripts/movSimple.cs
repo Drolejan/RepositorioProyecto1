@@ -47,7 +47,13 @@ public class movSimple : MonoBehaviour
     void FixedUpdate()
     {
         if(movX!=0 && !isHit)
+        {
         rbplayer.velocity = new Vector2(movX, rbplayer.velocity.y);
+        }
+        else if(movX == 0 && !isHit)
+        {
+        rbplayer.velocity = new Vector2(0, rbplayer.velocity.y);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -62,7 +68,14 @@ public class movSimple : MonoBehaviour
     {
         isHit = true;
         playerAnims.SetTrigger("golpeado");
-        rbplayer.AddForce(new Vector2(-1, 1) * knockback, ForceMode2D.Impulse);
+        if (movX > 0)
+        {
+            rbplayer.AddForce(new Vector2(-1, 1) * knockback, ForceMode2D.Impulse);
+        }
+        else
+        {
+            rbplayer.AddForce(new Vector2(1, 1) * knockback, ForceMode2D.Impulse);
+        }
         yield return new WaitForSeconds(1f);
         isHit = false;
     }
