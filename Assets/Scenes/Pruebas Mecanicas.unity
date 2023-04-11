@@ -380,6 +380,7 @@ GameObject:
   - component: {fileID: 562286550}
   - component: {fileID: 562286555}
   - component: {fileID: 562286554}
+  - component: {fileID: 562286556}
   m_Layer: 0
   m_Name: redHood
   m_TagString: Untagged
@@ -528,6 +529,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &562286556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562286549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e46414f442733945bff4efeb25de3eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bala: {fileID: 7046090059626310669, guid: 57cf3d03b5b0b94469b4a4d24e0c0938, type: 3}
+  spawn: {fileID: 562286553}
+  vel: 10
 --- !u!1 &568811923
 GameObject:
   m_ObjectHideFlags: 0

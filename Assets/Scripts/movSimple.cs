@@ -25,6 +25,10 @@ public class movSimple : MonoBehaviour
         {
             rbplayer.AddForce(Vector2.up*jumpS);
         }
+        else if (Input.GetButtonDown("Fire1"))
+        {
+            playerAnims.SetTrigger("tiro");
+        }
 
 
         if(movX>0)
